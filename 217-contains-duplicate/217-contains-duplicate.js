@@ -3,12 +3,12 @@
  * @return {boolean}
  */
 function containsDuplicate(nums) {
-    let memory = {};
-    for(i = 0; i < nums.length; i++) {
-        if(memory[nums[i]] === undefined) {
-            memory[nums[i]] = 'haha'
-        } else {
+    let obj = {};
+    for(i = 0; i < nums.length; i++){
+        if(obj[nums[i]]){
             return true;
+        } else {
+            obj[nums[i]] = true;
         }
     }
     return false;
